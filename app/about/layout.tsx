@@ -8,8 +8,8 @@ export default function AboutLayout({
 }) {
   return (
     <>
-      <nav>About NavBar</nav>
+      <nav>About Navbar</nav>
       <main className={styles.main}>{children}</main>
     </>
-  )
+  );
 }
