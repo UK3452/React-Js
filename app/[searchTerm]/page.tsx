@@ -30,14 +30,21 @@ export default async function searchResults({ params: { searchTerm } }: Props) {
 
   //   console.log(results);
   const content = (
-    <main className="bg-slate-200 mx-auto max-w-lg py-1 min-h-screen">
-      {results ? (
-        Object.values(results).map((result) => {
-          return <Item key={result.pageid} result={result} />;
-        })
-      ) : (
-        <h2 className="p-2 text-xl">{`${searchTerm} Not Found!!`}</h2>
-      )}
+    <main className="bg-slate-600 p-2 md:flex-row top-0 drop-shadow-x1">
+      <div className="flex flex-row p-2 justify-center text-2xl mb-2 ml-5 dark:text-white">
+        <h2 className="">{"You Searched for "}</h2>
+        <b>&nbsp;{`${searchTerm}`}</b>
+        <h2>{`, here are your Results...`}</h2>
+      </div>
+      <div className="bg-slate-200 mx-auto max-w-lg py-1 min-h-screen">
+        {results ? (
+          Object.values(results).map((result) => {
+            return <Item key={result.pageid} result={result} />;
+          })
+        ) : (
+          <h2 className="p-2 text-xl">{`${searchTerm} Not Found!!`}</h2>
+        )}
+      </div>
     </main>
   );
 

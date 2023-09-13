@@ -42,8 +42,7 @@ export default function Navbar() {
           </Link>
         </div>
       </nav>
-      <div className="bg-slate-600 p-2 flex justify-between md:flex-row top-0 drop-shadow-x1">
-        <div></div>
+      <div className="w-500 bg-slate-600 p-2 flex justify-between md:flex-row top-0 drop-shadow-x1">
         <Search />
       </div>
     </div>
