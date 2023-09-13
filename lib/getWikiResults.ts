@@ -23,7 +23,7 @@ export default async function getWikiResults(searchTerm: string) {
 
 export async function getPosts() {
   const data = await fetch(
-    "https://api.slingacademy.com/v1/sample-data/blog-posts?offset=5&limit=2"
+    "https://api.slingacademy.com/v1/sample-data/blog-posts?offset=5&limit=5"
   );
   const pos = await data.json();
   const content: BlogsEntity[] = pos.blogs;
@@ -40,7 +40,7 @@ export async function getPosts() {
 
 export async function getPostDataChunk(id: string) {
   const data = await fetch(
-    "https://api.slingacademy.com/v1/sample-data/blog-posts?offset=5&limit=2"
+    "https://api.slingacademy.com/v1/sample-data/blog-posts?offset=5&limit=5"
   );
   const pos = await data.json();
   const content: BlogsEntity[] = pos.blogs;

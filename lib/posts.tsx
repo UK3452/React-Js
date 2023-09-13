@@ -1,12 +1,12 @@
 // import fs from "fs";
-import path from "path";
+// import path from "path";
 // import matter from "gray-matter";
 // import { remark } from "remark";
 // import html from "remark-html";
 import { getPostDataChunk, getPosts } from "./getWikiResults";
 import ListItem from "@/app/components/ListItem";
 
-const postsDirectory = path.join(process.cwd(), "blogposts");
+// const postsDirectory = path.join(process.cwd(), "blogposts");
 
 export async function getSortedPostsData() {
   const data: Promise<BlogPost[]> = getPosts();
@@ -24,7 +24,7 @@ export async function getSortedPostsData() {
 
 export async function getSortedPostsList() {
   const sortedPost = await getSortedPostsData();
-  return sortedPost.map((post) => <ListItem key={post.id} post={post} />);
+  return sortedPost;
 }
 
 export async function getPostData(id: string) {
@@ -38,7 +38,7 @@ export async function getPostData(id: string) {
     date: post?.date,
     content_html: htmlContent,
   };
-  return posts;
+  return data;
 }
 
 // export async function getPostData(id: string) {
