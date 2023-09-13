@@ -14,7 +14,7 @@ export default function Search() {
   };
   return (
     <form
-      className="w-50 flex justify-center md:justify-between"
+      className="flex md:justify-normal"
       onSubmit={handleSubmit}
     >
       <input
